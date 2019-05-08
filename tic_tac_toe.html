@@ -1,0 +1,65 @@
+<html lang="en">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta charset="UTF-8">
+  <title>Tic Tac Toe</title> <!--Creating a title for the html page-->
+  <link rel="stylesheet" href="tttStyleSheet.css"> <!-- Linking the css style sheet to the html file here.-->
+</head>
+
+<body>
+  <div class="board-container flex-container flex-column flex-center"> <!-- creating a flex/board container for the board-->
+
+    <div class="flex-container">
+    <div class='title'> The </div>
+    <img src="gameTitle.png" alt="loc"width='300'height='50'> <!--Inserting more text and a .png photo to finish creating a game page title-->
+    <div class='title'> Game </div>
+  </div>
+
+  <div class='board flex-container flex-wrap'>
+
+    <div id="chooseSymbol">
+      <span class="message"> Play as X or O? X goes first!</span> <!--Creating a pop-up to allow the player to choose who they want to play as-->
+      <button onclick="chooseSymbol(0)">X</button> <!--Creating buttons that pass a playerChoice to the javascript file, 0 and 1 represent a choice-->
+      <button onclick="chooseSymbol(1)">O</button>
+    </div>
+
+    <div id="chooseGame">
+      <span class="message"> Start Game </span> <!--Creating a pop-up to allow the player to choose who they would like to play against-->
+      <button onclick="chooseGame(0)">Vs Player</button><!--Creating buttons that pass a playerChoice to the javascript file, 0 and 1 represent a game type choice-->
+      <button onclick="chooseGame(1)">Vs Computer</button>
+    </div>
+
+    <div id="gameEnd">
+    <span class="message" id = winMessage></span> <!--Creating another pop-up that notifies the user when a player has won, or tied-->
+    </div>
+
+    <div id="t0" class="tile">
+    </div>
+    <div id="t1" class="tile">
+    </div>
+    <div id="t2" class="tile">
+    </div>
+    <div id="t3" class="tile">
+    </div>
+    <div id="t4" class="tile"> <!--Creating the board tiles and giving each tile a unique id within the tile class-->
+    </div>
+    <div id="t5" class="tile">
+    </div>
+    <div id="t6" class="tile">
+    </div>
+    <div id="t7" class="tile">
+    </div>
+    <div id="t8" class="tile">
+    </div>
+
+  </div>
+
+  <button onclick="resetGame()">Reset <!--Creating a new reset but so that users may reset the game at any time-->
+  </button>
+  </div>
+<script src="ticTacToe.js"> <!--Linking the javascript file to the html file-->
+  </script>
+</body>
+</html>

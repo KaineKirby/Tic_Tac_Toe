@@ -1,0 +1,155 @@
+html,
+body {
+  user-select:none;
+  height: 100%;
+  font-family: 'Comic Sans MS', cursive, sans-serif; /*Creating the style for any text that will appear on the board, Specifically within the tiles for Xs and Os*/
+  background-color: FloralWhite;
+}
+
+.flex-container{
+    display:flex; /*Creating a flex container*/
+}
+.flex-column{
+  flex-direction: column;
+}
+.flex-wrap{
+  flex-wrap: wrap;
+}
+.flex-center{
+  justify-content: center; /*Positioning the tiles so that they align in the shape of a board for the game*/
+  align-items: center;
+}
+.title{
+  display: solid;
+  font-size: 40px;
+  color: black;
+  margin-bottom: 10px; /*Styling the font and margins for the title class*/
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.board-container{
+  height: 100%;
+  width: 100%;
+}
+.board{
+  width: 663px;
+  position: relative;
+}
+#t0{
+  border-right:3px solid FireBrick;
+  border-bottom:3px solid FireBrick;
+}
+#t1{
+  border-right:3px solid FireBrick;
+  border-bottom:3px solid FireBrick; /*Styling each individual tile so that the borders match the style of a ticTacToe board*/
+  border-left: 3px solid FireBrick;
+}
+#t2{
+  border-left:3px solid FireBrick;
+  border-bottom:3px solid FireBrick;
+}
+#t3{
+  border-right:3px solid FireBrick;
+  border-top:3px solid FireBrick; /*Styling each individual tile so that the borders match the style of a ticTacToe board*/
+  border-bottom:3px solid FireBrick;
+}
+#t4{
+  border-right:3px solid FireBrick;
+  border-left: 3px solid Firebrick; /*Styling each individual tile so that the borders match the style of a ticTacToe board*/
+  border-bottom:3px solid FireBrick;
+  border-top: 3px solid FireBrick;
+}
+#t5{
+  border-left:3px solid FireBrick;
+  border-top:3px solid Firebrick; /*Styling each individual tile so that the borders match the style of a ticTacToe board*/
+  border-bottom:3px solid FireBrick;
+}
+#t6{
+  border-right:3px solid FireBrick;
+  border-top:3px solid FireBrick;
+}
+#t7{
+  border-right:3px solid FireBrick;
+  border-left:3px solid Firebrick; /*Styling each individual tile so that the borders match the style of a ticTacToe board*/
+  border-top:3px solid FireBrick;
+}
+#t8{
+  border-left:3px solid FireBrick;
+  border-top:3px solid FireBrick;
+}
+.tile{
+  height: 215px;
+  width: 215px;
+  border-radius: 10px;
+  text-align: center; /*Generally styling all of the tiles so that they match the style of a ticTacToe board, are aligned correctly, and look somewhat appealing*/
+  vertical-align: middle;
+  font-size: 150px;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+.tile:hover{
+  background-color: gainsboro; /*Making it so that when the mouse cursor is hovering over a tile, it changes the color of the tile's background*/
+  cursor: pointer;
+}
+
+#gameEnd{
+  position: absolute;
+  display: none;
+  height: 300px;
+  width: 300px;
+  top: 0;
+  bottom: 0;
+  left: 0; /*Setting the styling for the pop-up that notifies the user of a game ending event, being a win, loss, or tie*/
+  right: 0;
+  margin: auto;
+  background-color: Black;
+  text-align: center;
+  border-radius: 5px;
+  color: white;
+  font-size: 2em;
+  opacity: 0.9;
+}
+
+.message {
+  display: block; /*Minor stlying on the message class, making it display as a block*/
+}
+
+#chooseGame{
+  position: absolute;
+  display: none;
+  height: 300px;
+  width: 300px;
+  top: 0;
+  bottom: 0;
+  left: 0;  /*Styling the initial pop-up that allows the user to choose if they'd like to play against the computer or another human player*/
+  right: 0;
+  margin: auto;
+  background-color: Black;
+  text-align: center;
+  border-radius: 5px;
+  color: white;
+  font-size: 2em;
+  opacity: 0.9;
+}
+#chooseSymbol{
+  position: absolute;
+  display: none;
+  height: 300px;
+  width: 300px;
+  top: 0;
+  bottom: 0;
+  left: 0;  /*Styling the second pop-up that allows the user to choose if they'd like to take the first turn as "X" or the second turn as "O"*/
+  right: 0;
+  margin: auto;
+  background-color: Black;
+  text-align: center;
+  border-radius: 5px;
+  color: white;
+  font-size: 2em;
+  opacity: 0.9;
+}
+
+button {
+  border-radius: 150px; /*Minor styling to the buttons in the game. Rounding out the edges and changing the cursor to a pointer when on the button*/
+  cursor: pointer;
+}
